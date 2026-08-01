@@ -11,3 +11,11 @@ app = FastAPI(
 @app.get("/")
 def read_root():
     return {"message": "Добро пожаловать в Task Tracker API!"}
+
+
+# /about endpoint
+@app.get("/about")
+def get_about():
+    return {
+        "name": "John",
+        "goal": "To become president"}
